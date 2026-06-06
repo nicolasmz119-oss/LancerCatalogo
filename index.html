@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lancer · Catálogo iPhone</title>
+<meta name="description" content="iPhones nuevos y usados con garantía. Stock actualizado todos los días en Tucumán. Lancer.">
+<meta name="theme-color" content="#000000">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<!-- Open Graph (cómo se ve al compartir por WhatsApp/IG) -->
+<meta property="og:title" content="Lancer · Catálogo iPhone">
+<meta property="og:description" content="iPhones nuevos y usados con garantía. Stock actualizado todos los días en Tucumán.">
+<meta property="og:image" content="apple-touch-icon.png">
+<meta property="og:type" content="website">
+
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1VYCWQ91G0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1VYCWQ91G0');
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #000000;
+    --bg-card: #0a0a0a;
+    --bg-card-hover: #111111;
+    --strong-blue: #0028D2;
+    --mostly-pure: #00B9FF;
+    --white: #ffffff;
+    --gray-1: #1a1a1a;
+    --gray-2: #2a2a2a;
+    --gray-3: #555555;
+    --gray-4: #888888;
+    --gray-5: #cccccc;
+    --radius: 18px;
+    --radius-sm: 12px;
+    --radius-xs: 999px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+  html, body {
+    background: var(--bg);
+    color: var(--white);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Atmospheric background blue glow */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -20%; left: -10%;
+    width: 60%; height: 60%;
+    background: radial-gradient(circle, rgba(0, 40, 210, 0.25) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: -30%; right: -10%;
+    width: 60%; height: 70%;
+    background: radial-gradient(circle, rgba(0, 185, 255, 0.12) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 28px 24px 80px;
+  }
+
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+  .logo-img {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
+  .header-cta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border: 1px solid var(--gray-2);
+    border-radius: var(--radius-xs);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  .header-cta:hover {
+    border-color: var(--mostly-pure);
+    background: rgba(0, 185, 255, 0.05);
+  }
+
+  /* HERO */
+  .hero {
+    margin-bottom: 56px;
+    max-width: 760px;
+  }
+  .hero h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: clamp(48px, 8vw, 96px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+  .hero h1 .accent {
+    color: var(--mostly-pure);
+    font-style: italic;
+  }
+  .hero p {
+    font-size: 15px;
+    color: var(--gray-5);
+    max-width: 480px;
+    line-height: 1.5;
+  }
+  .hero-benefits {
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--gray-5);
+    font-weight: 400;
+  }
+  .hero-benefits li svg {
+    width: 16px; height: 16px;
+    color: var(--mostly-pure);
+    flex-shrink: 0;
+  }
+  .updated {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 7px 14px;
+    border: 1px solid var(--gray-2);
+    border-radius: var(--radius-xs);
+    font-size: 12px;
+    color: var(--gray-4);
+  }
+  .updated::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--mostly-pure);
+    box-shadow: 0 0 8px var(--mostly-pure);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%,100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* CANJE BANNER */
+  .canje-banner {
+    background: linear-gradient(135deg, var(--strong-blue) 0%, var(--mostly-pure) 100%);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    margin-bottom: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .canje-banner:hover { transform: translateY(-2px); }
+  .canje-banner-content h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.1;
+    margin-bottom: 4px;
+  }
+  .canje-banner-content p {
+    font-size: 14px;
+    opacity: 0.85;
+  }
+  .canje-banner-btn {
+    background: var(--white);
+    color: var(--strong-blue);
+    padding: 12px 24px;
+    border-radius: var(--radius-xs);
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-family: inherit;
+  }
+  .canje-banner-btn:hover { transform: scale(1.03); }
+
+  /* TABS NUEVOS / USADOS */
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--gray-2);
+    padding-bottom: 0;
+  }
+  .tab {
+    background: transparent;
+    border: none;
+    color: var(--gray-4);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    padding: 16px 4px;
+    margin-right: 32px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.2s;
+    letter-spacing: -0.01em;
+  }
+  .tab.active { color: var(--white); }
+  .tab.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px; left: 0; right: 0;
+    height: 2px;
+    background: var(--mostly-pure);
+  }
+  .tab:hover:not(.active) { color: var(--gray-5); }
+  .tab-ofertas {
+    color: #ff8a3d !important;
+  }
+  .tab-ofertas.active {
+    color: #ff5722 !important;
+  }
+  .tab-ofertas.active::after {
+    background: linear-gradient(90deg, #ff5722, #ff8a3d) !important;
+  }
+  .tab-ofertas:hover:not(.active) {
+    color: #ffa66a !important;
+  }
+
+  /* FILTROS MODELO */
+  .filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 36px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .filters::-webkit-scrollbar { display: none; }
+  .filter-pill {
+    background: transparent;
+    border: 1px solid var(--gray-2);
+    color: var(--gray-5);
+    padding: 8px 16px;
+    border-radius: var(--radius-xs);
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .filter-pill:hover {
+    border-color: var(--gray-4);
+    color: var(--white);
+  }
+  .filter-pill.active {
+    background: var(--white);
+    color: var(--bg);
+    border-color: var(--white);
+  }
+
+  /* GRID */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  /* CARD */
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--gray-1);
+    border-radius: var(--radius);
+    padding: 24px 22px 22px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 380px;
+  }
+  .card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--gray-3);
+    transform: translateY(-3px);
+  }
+
+  .card-image {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    position: relative;
+  }
+  .card-image {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    position: relative;
+  }
+  .iphone-img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 25px 35px rgba(0,0,0,0.6));
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .card:hover .iphone-img {
+    transform: translateY(-6px) scale(1.04);
+  }
+
+  .card-model {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+  }
+  .card-capacity {
+    color: var(--gray-4);
+    font-size: 13px;
+    margin-bottom: 14px;
+  }
+
+  .card-attrs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+    min-height: 26px;
+  }
+  .attr-pill {
+    font-size: 11px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    color: var(--gray-5);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .attr-pill.bateria {
+    color: var(--mostly-pure);
+    border-color: rgba(0,185,255,0.3);
+    background: rgba(0,185,255,0.05);
+  }
+  .attr-pill.nuevo {
+    color: #4ade80;
+    border-color: rgba(74, 222, 128, 0.3);
+    background: rgba(74, 222, 128, 0.05);
+  }
+  .attr-pill.asis {
+    color: #f59e0b;
+    border-color: rgba(245, 158, 11, 0.4);
+    background: rgba(245, 158, 11, 0.08);
+    font-weight: 700;
+  }
+  .attr-pill.consultar {
+    color: var(--gray-4);
+  }
+  .color-info {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    color: var(--gray-4);
+    margin-bottom: 16px;
+    font-style: italic;
+    line-height: 1.4;
+  }
+  .color-info svg {
+    flex-shrink: 0;
+    opacity: 0.7;
+  }
+
+  /* OFERTA */
+  .oferta-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: linear-gradient(135deg, #ff5722 0%, #ff8a3d 100%);
+    color: white;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 10px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    letter-spacing: 0.06em;
+    z-index: 2;
+    box-shadow: 0 4px 12px rgba(255, 87, 34, 0.4);
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 4px 12px rgba(255, 87, 34, 0.4); }
+    50% { box-shadow: 0 4px 20px rgba(255, 87, 34, 0.7); }
+  }
+  .card-oferta {
+    border-color: rgba(255, 87, 34, 0.25);
+  }
+  .card-oferta:hover {
+    border-color: rgba(255, 138, 61, 0.5);
+  }
+
+  .card-bottom {
+    margin-top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .card-price {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  .card-price .desde {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: var(--gray-4);
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .card-price .currency {
+    font-size: 16px;
+    color: var(--gray-4);
+    font-weight: 600;
+    margin-right: 2px;
+    vertical-align: top;
+    margin-top: 4px;
+    display: inline-block;
+  }
+  .card-cta {
+    background: var(--white);
+    color: var(--bg);
+    border: none;
+    padding: 11px 18px;
+    border-radius: var(--radius-xs);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    transition: all 0.2s;
+  }
+  .card-cta:hover {
+    background: var(--mostly-pure);
+    transform: translateX(2px);
+  }
+  .card-cta svg { width: 12px; height: 12px; }
+
+  /* EMPTY STATE */
+  .empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--gray-4);
+  }
+  .empty h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: var(--white);
+  }
+
+  /* MODAL CANJE */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--bg-card);
+    border: 1px solid var(--gray-2);
+    border-radius: var(--radius);
+    max-width: 540px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 32px 28px;
+    position: relative;
+  }
+  .modal h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.1;
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+  }
+  .modal h2 .accent { color: var(--mostly-pure); }
+  .modal p.sub { font-size: 14px; color: var(--gray-4); margin-bottom: 24px; }
+  .modal label {
+    display: block;
+    font-size: 12px;
+    color: var(--gray-4);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    margin-top: 14px;
+    font-weight: 500;
+  }
+  .modal select, .modal input {
+    width: 100%;
+    background: var(--gray-1);
+    border: 1px solid var(--gray-2);
+    color: var(--white);
+    padding: 13px 14px;
+    border-radius: var(--radius-sm);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    -webkit-appearance: none;
+  }
+  .modal select:focus, .modal input:focus { outline: none; border-color: var(--mostly-pure); }
+  .result {
+    margin-top: 24px;
+    padding: 22px;
+    background: linear-gradient(135deg, rgba(0,40,210,0.15) 0%, rgba(0,185,255,0.1) 100%);
+    border: 1px solid rgba(0,185,255,0.3);
+    border-radius: var(--radius);
+    text-align: center;
+  }
+  .result .label-r {
+    font-size: 11px;
+    color: var(--gray-5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 4px;
+  }
+  .result .price-r {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 42px;
+    color: var(--white);
+    letter-spacing: -0.02em;
+  }
+  .result .note-r {
+    font-size: 12px;
+    color: var(--gray-4);
+    margin-top: 8px;
+  }
+  .modal-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: transparent;
+    border: none;
+    color: var(--gray-4);
+    font-size: 24px;
+    cursor: pointer;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    transition: all 0.2s;
+  }
+  .modal-close:hover { background: var(--gray-1); color: var(--white); }
+  .modal-cta {
+    margin-top: 24px;
+    width: 100%;
+    background: #25D366;
+    color: var(--white);
+    border: none;
+    padding: 16px;
+    border-radius: var(--radius-xs);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .modal-cta:hover { background: #1ebe5a; transform: translateY(-1px); }
+  .canje-note {
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--gray-4);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  /* NOTA ASIS */
+  .asis-nota {
+    margin: 60px 0 0;
+    padding: 20px 28px;
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    border-radius: var(--radius);
+    background: rgba(245, 158, 11, 0.04);
+    font-size: 13px;
+    color: var(--gray-4);
+    line-height: 1.6;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .asis-nota strong {
+    color: #f59e0b;
+    font-weight: 600;
+  }
+
+  /* FOOTER */
+  footer {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--gray-1);
+    text-align: center;
+    color: var(--gray-4);
+    font-size: 12px;
+  }
+  footer a { color: var(--gray-5); text-decoration: none; margin: 0 12px; }
+  footer a:hover { color: var(--mostly-pure); }
+
+  @media (max-width: 600px) {
+    .container { padding: 20px 16px 60px; }
+    .hero h1 { font-size: 48px; }
+    .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .card { padding: 16px 14px; min-height: 320px; }
+    .card-image { height: 140px; margin-bottom: 12px; }
+    .card-model { font-size: 17px; }
+    .card-price { font-size: 22px; }
+    .card-cta { padding: 9px 12px; font-size: 12px; }
+    .card-cta span { display: none; }
+    .canje-banner { padding: 20px; }
+    .canje-banner-content h3 { font-size: 22px; }
+    .tab { font-size: 18px; margin-right: 20px; }
+    .header-cta span { display: none; }
+  }
+
+  /* fade-in animation */
+  @keyframes cardIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .card { animation: cardIn 0.4s ease backwards; }
+  .card:nth-child(1) { animation-delay: 0.05s; }
+  .card:nth-child(2) { animation-delay: 0.1s; }
+  .card:nth-child(3) { animation-delay: 0.15s; }
+  .card:nth-child(4) { animation-delay: 0.2s; }
+  .card:nth-child(5) { animation-delay: 0.25s; }
+  .card:nth-child(6) { animation-delay: 0.3s; }
+  .card:nth-child(n+7) { animation-delay: 0.35s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <img src="logo.png" alt="Lancer" class="logo-img">
+    <a class="header-cta" href="https://wa.me/5493815902876" target="_blank" onclick="trackHeaderCTA()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <span>Hablar con nosotros</span>
+    </a>
+  </header>
+
+  <section class="hero">
+    <h1>Tu próximo iPhone <span class="accent">está acá.</span></h1>
+    <ul class="hero-benefits">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Nuevos con garantía oficial Apple de 1 año</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Usados con 90 días de garantía Lancer</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Accesorios de regalo en cada compra</li>
+    </ul>
+    <div class="updated" id="updated">Actualizado hace minutos</div>
+  </section>
+
+  <div class="canje-banner" onclick="openCanje()">
+    <div class="canje-banner-content">
+      <h3>¿Tenés un iPhone para entregar?</h3>
+      <p>Recibimos tu equipo como parte de pago. Cotizá en 30 segundos.</p>
+    </div>
+    <button class="canje-banner-btn" onclick="event.stopPropagation(); openCanje();">Cotizar canje →</button>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" onclick="setTab('nuevos')">Nuevos</button>
+    <button class="tab" onclick="setTab('usados')">Usados</button>
+    <button class="tab tab-ofertas" onclick="setTab('ofertas')">Ofertas 🔥</button>
+  </div>
+
+  <div class="filters" id="filters"></div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="asis-nota">
+    <strong>¿Qué es un iPhone ASIS?</strong> Son equipos devueltos a Apple con menos de 20 ciclos de carga. Estado impecable, prácticamente nuevos, sin caja. Misma garantía de 90 días que el resto de nuestros usados.
+  </div>
+
+  <footer>
+    <p style="margin-bottom: 14px;">
+      <a href="https://wa.me/5493815902876" target="_blank">WhatsApp</a> ·
+      <a href="https://instagram.com/lancer.tuc" target="_blank">@lancer.tuc</a>
+    </p>
+    <p>Lancer · Tucumán · iPhones originales y garantizados</p>
+  </footer>
+</div>
+
+<!-- MODAL CANJE -->
+<div class="modal-overlay" id="canjeModal" onclick="if(event.target===this) closeCanje()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeCanje()">×</button>
+    <h2>Canjeá tu <span class="accent">iPhone usado</span></h2>
+    <p class="sub">Completá los datos de tu equipo y te pasamos cotización por WhatsApp.</p>
+
+    <label>Modelo</label>
+    <select id="cModel"></select>
+    <label>Capacidad</label>
+    <select id="cCap"></select>
+    <label>Estado de la batería</label>
+    <select id="cBat">
+      <option value="alta">94% — 100% (muy buena)</option>
+      <option value="media">87% — 93% (normal)</option>
+      <option value="baja">83% — 86% (gastada)</option>
+      <option value="muybaja">Menos de 83% (necesita cambio)</option>
+    </select>
+
+    <a class="modal-cta" id="canjeWa" href="#" target="_blank" onclick="trackSendCanjeFromUI()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right:8px;vertical-align:-3px;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Enviar consulta por WhatsApp
+    </a>
+    <p class="canje-note">Recibimos tu equipo como parte de pago de un iPhone nuevo o usado.</p>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   DATOS: editá acá para actualizar el catálogo
+   ========================================================= */
+
+// NUEVOS = sellados
+// Para marcar como oferta: oferta: true
+const NUEVOS = [
+  { modelo: '17 Pro Max', cap: '256', precio: 1420 },
+  { modelo: '17 Pro', cap: '256', precio: 1315 },
+  { modelo: '17', cap: '256', precio: 870 },
+  { modelo: '16', cap: '128', precio: 765 },
+];
+
+// USADOS = todo lo que tiene % de batería (no sellado)
+// Si hay varias unidades del mismo modelo+capacidad+precio, agruparlas en baterias: []
+// asis: true = devuelto a Apple, menos de 20 ciclos, como nuevo sin caja
+const USADOS = [
+  { modelo: '17 Pro Max', cap: '256', baterias: ['ASIS'], precioMin: 1375, precioMax: 1375, asis: true },
+  { modelo: '17 Pro', cap: '256', baterias: ['ASIS'], precioMin: 1255, precioMax: 1255, asis: true },
+  { modelo: '16 Pro Max', cap: '512', baterias: ['91%'], precioMin: 980, precioMax: 980 },
+  { modelo: '16 Pro Max', cap: '256', baterias: ['90%'], precioMin: 950, precioMax: 950 },
+  { modelo: '16 Pro', cap: '256', baterias: ['90%'], precioMin: 870, precioMax: 870 },
+  { modelo: '16 Pro', cap: '128', baterias: ['89%-91%'], precioMin: 780, precioMax: 780 },
+  { modelo: '16', cap: '128', baterias: ['91%'], precioMin: 650, precioMax: 650 },
+  { modelo: '16', cap: '128', baterias: ['90%'], precioMin: 695, precioMax: 695 },
+  { modelo: '15 Pro', cap: '128', baterias: ['88%'], precioMin: 620, precioMax: 620 },
+  { modelo: '15 Pro', cap: '128', baterias: ['86%'], precioMin: 635, precioMax: 635 },
+  { modelo: '15', cap: '128', baterias: ['85%-86%'], precioMin: 500, precioMax: 500 },
+  { modelo: '14', cap: '128', baterias: ['80%'], precioMin: 395, precioMax: 395 },
+  { modelo: '13 Pro', cap: '1TB', baterias: ['74%'], precioMin: 550, precioMax: 550 },
+  { modelo: '13 Pro', cap: '256', baterias: ['100%'], precioMin: 499, precioMax: 499 },
+  { modelo: '13', cap: '128', baterias: ['86%'], precioMin: 379, precioMax: 379 },
+];
+
+// PRECIOS DE CANJE: NO se muestran en el catálogo (la competencia lo ve).
+// El cliente completa el formulario y se envía por WhatsApp para cotización privada.
+
+const PHONE = '5493815902876'; // WhatsApp number
+
+/* ========================================================= */
+
+// === GOOGLE ANALYTICS - Funciones de tracking ===
+function trackEvent(eventName, params) {
+  if (typeof gtag === 'function') {
+    gtag('event', eventName, params || {});
+  }
+}
+
+function trackClickLoQuiero(modelo, condicion, precio) {
+  trackEvent('click_lo_quiero', {
+    modelo: modelo,
+    condicion: condicion,
+    precio_usd: precio,
+    event_category: 'conversion',
+    event_label: `${condicion}_${modelo}`,
+  });
+}
+
+function trackOpenCanje() {
+  trackEvent('open_canje_modal', {
+    event_category: 'engagement',
+  });
+}
+
+function trackSendCanje(modelo, cap, bat) {
+  trackEvent('send_canje_consulta', {
+    modelo: modelo,
+    capacidad: cap,
+    bateria: bat,
+    event_category: 'conversion',
+    event_label: `canje_${modelo}_${cap}`,
+  });
+}
+
+function trackTabChange(tab) {
+  trackEvent('change_tab', {
+    tab: tab,
+    event_category: 'navigation',
+  });
+}
+
+function trackFilterChange(filter) {
+  trackEvent('change_filter', {
+    filter: filter,
+    event_category: 'navigation',
+  });
+}
+
+function trackSendCanjeFromUI() {
+  const modelo = document.getElementById('cModel').value;
+  const cap = document.getElementById('cCap').value;
+  const bat = document.getElementById('cBat').value;
+  trackSendCanje(modelo, cap, bat);
+}
+
+function trackHeaderCTA() {
+  trackEvent('click_header_wa', {
+    event_category: 'conversion',
+  });
+}
+
+let currentTab = 'nuevos';
+let currentFilter = 'all';
+
+function getMockup(item) {
+  const modelKey = item.modelo;
+  const fileName = IPHONE_IMAGES[modelKey] || IPHONE_IMAGES['default'];
+  return `<img src="iphones/${fileName}" alt="iPhone ${modelKey}" class="iphone-img" loading="lazy" />`;
+}
+
+// Mapeo de modelo -> archivo de imagen
+// Para agregar nuevos modelos: subí la imagen a /iphones/ y agregá la entrada acá
+const IPHONE_IMAGES = {
+  '17 Pro Max': '17promax.webp',
+  '17 Pro': '17pro.webp',
+  '17': '17.webp',
+  '16 Pro Max': '16promax.webp',
+  '16 Pro': '16pro.webp',
+  '16 Plus': '16.webp',
+  '16': '16.webp',
+  '15 Pro Max': '15promax.webp',
+  '15 Pro': '15pro.webp',
+  '15 Plus': '15.webp',
+  '15': '15.webp',
+  '14 Pro Max': '14promax.webp',
+  '14 Pro': '14pro.webp',
+  '14 Plus': '14.webp',
+  '14': '14.webp',
+  '13 Pro Max': '13promax.webp',
+  '13 Pro': '13pro.webp',
+  '13 mini': '13.webp',
+  '13': '13.webp',
+  'default': '17pro.webp',
+};
+
+function renderGrid() {
+  const grid = document.getElementById('grid');
+  let data;
+  if (currentTab === 'nuevos') data = NUEVOS;
+  else if (currentTab === 'usados') data = USADOS;
+  else if (currentTab === 'ofertas') {
+    // Combinar ofertas de NUEVOS y USADOS
+    data = [
+      ...NUEVOS.filter(d => d.oferta).map(d => ({...d, _esNuevo: true})),
+      ...USADOS.filter(d => d.oferta).map(d => ({...d, _esNuevo: false}))
+    ];
+  }
+
+  let filtered = data;
+  if (currentFilter !== 'all') {
+    filtered = data.filter(d => d.modelo === currentFilter);
+  }
+
+  if (filtered.length === 0) {
+    grid.innerHTML = `<div class="empty"><h3>No tenemos esto en stock ahora</h3><p>Escribinos por WhatsApp y lo conseguimos.</p></div>`;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(item => {
+    // En tab ofertas, determinar si es nuevo o usado por la marca _esNuevo
+    let isUsado;
+    if (currentTab === 'ofertas') isUsado = !item._esNuevo;
+    else isUsado = currentTab === 'usados';
+
+    const priceMin = isUsado ? item.precioMin : item.precio;
+    const priceMax = isUsado ? item.precioMax : item.precio;
+    const showDesde = priceMin !== priceMax;
+    const priceDisplay = showDesde ? priceMin : priceMin;
+
+    const condPill = isUsado
+      ? item.asis
+        ? `<span class="attr-pill asis">ASIS · como nuevo</span>`
+        : `<span class="attr-pill bateria">Batería ${item.baterias.join(' · ')}</span>`
+      : `<span class="attr-pill nuevo">Nuevo · sellado</span>`;
+    const garantiaInfo = isUsado
+      ? `<span class="color-info"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg> 90 días de garantía · colores a consultar</span>`
+      : `<span class="color-info"><svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L4 6v6c0 5 3.5 9.5 8 10 4.5-.5 8-5 8-10V6l-8-4z"/></svg> Garantía Apple 1 año · colores a consultar</span>`;
+
+    const ofertaBadge = item.oferta ? `<div class="oferta-badge">🔥 OFERTA</div>` : '';
+
+    const waMsg = encodeURIComponent(`Hola! Me interesa el iPhone ${item.modelo} de ${item.cap}GB que vi en el catálogo.`);
+    const trackData = `${item.modelo}_${item.cap}GB`;
+
+    return `
+      <div class="card ${item.oferta ? 'card-oferta' : ''}">
+        ${ofertaBadge}
+        <div class="card-image">${getMockup(item)}</div>
+        <div class="card-model">iPhone ${item.modelo}</div>
+        <div class="card-capacity">${item.cap} GB</div>
+        <div class="card-attrs">
+          ${condPill}
+        </div>
+        ${garantiaInfo}
+        <div class="card-bottom">
+          <div class="card-price">
+            ${showDesde ? '<span class="desde">Desde</span>' : ''}
+            <span class="currency">USD</span>${priceDisplay}
+          </div>
+          <a class="card-cta" href="https://wa.me/${PHONE}?text=${waMsg}" target="_blank" onclick="trackClickLoQuiero('${trackData}', '${isUsado ? 'usado' : 'nuevo'}', ${priceDisplay})">
+            <span>Lo quiero</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderFilters() {
+  let data;
+  if (currentTab === 'nuevos') data = NUEVOS;
+  else if (currentTab === 'usados') data = USADOS;
+  else data = [...NUEVOS.filter(d => d.oferta), ...USADOS.filter(d => d.oferta)];
+
+  const modelos = [...new Set(data.map(d => d.modelo))];
+  // Sort modelos: by base number then by Pro Max > Pro > base
+  modelos.sort((a,b) => {
+    const ai = parseInt(a), bi = parseInt(b);
+    if (ai !== bi) return bi - ai; // newer first
+    const order = m => m.includes('Pro Max') ? 0 : m.includes('Pro') ? 1 : 2;
+    return order(a) - order(b);
+  });
+
+  const filters = document.getElementById('filters');
+  filters.innerHTML = `
+    <button class="filter-pill ${currentFilter === 'all' ? 'active' : ''}" onclick="setFilter('all')">Todos</button>
+    ${modelos.map(m => `<button class="filter-pill ${currentFilter === m ? 'active' : ''}" onclick="setFilter('${m}')">${m}</button>`).join('')}
+  `;
+}
+
+function setTab(tab) {
+  currentTab = tab;
+  currentFilter = 'all';
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  const tabIdx = tab === 'nuevos' ? 0 : tab === 'usados' ? 1 : 2;
+  document.querySelectorAll('.tab')[tabIdx].classList.add('active');
+  renderFilters();
+  renderGrid();
+  trackTabChange(tab);
+}
+
+function setFilter(filter) {
+  currentFilter = filter;
+  renderFilters();
+  renderGrid();
+  if (filter !== 'all') trackFilterChange(filter);
+}
+
+/* CANJE - sin mostrar precios, solo arma mensaje de WhatsApp */
+// Lista de modelos disponibles para canje
+const CANJE_MODELOS = {
+  '11': ['128'],
+  '11 Pro': ['64', '256', '512'],
+  '11 Pro Max': ['64', '256', '512'],
+  '12': ['64', '128'],
+  '12 Pro': ['128', '256', '512'],
+  '12 Pro Max': ['128', '256', '512'],
+  '13': ['128', '256', '512'],
+  '13 Pro': ['128', '256', '512'],
+  '13 Pro Max': ['128', '256', '512'],
+  '14': ['128', '256', '512'],
+  '14 Pro': ['128', '256', '512'],
+  '14 Pro Max': ['128', '256', '512'],
+  '15': ['128', '256', '512'],
+  '15 Pro': ['128', '256', '512'],
+  '15 Pro Max': ['256', '512'],
+  '16': ['128', '256', '512'],
+  '16 Pro': ['128', '256', '512'],
+  '16 Pro Max': ['256', '512'],
+  '17': ['256', '512'],
+  '17 Pro': ['256', '512'],
+  '17 Pro Max': ['256', '512'],
+};
+
+const BATERIA_LABELS = {
+  alta: '94% a 100%',
+  media: '87% a 93%',
+  baja: '83% a 86%',
+  muybaja: 'menos de 83%',
+};
+
+function populateCanje() {
+  const modelSel = document.getElementById('cModel');
+  const modelos = Object.keys(CANJE_MODELOS);
+  modelos.sort((a,b) => {
+    const ai = parseInt(a), bi = parseInt(b);
+    if (ai !== bi) return ai - bi;
+    const order = m => m.includes('Pro Max') ? 2 : m.includes('Pro') ? 1 : 0;
+    return order(a) - order(b);
+  });
+  modelSel.innerHTML = modelos.map(m => `<option value="${m}">iPhone ${m}</option>`).join('');
+  updateCanjeCap();
+  modelSel.addEventListener('change', updateCanjeCap);
+  document.getElementById('cCap').addEventListener('change', updateCanjeMessage);
+  document.getElementById('cBat').addEventListener('change', updateCanjeMessage);
+}
+
+function updateCanjeCap() {
+  const modelo = document.getElementById('cModel').value;
+  const caps = CANJE_MODELOS[modelo];
+  const capSel = document.getElementById('cCap');
+  capSel.innerHTML = caps.map(c => `<option value="${c}">${c} GB</option>`).join('');
+  updateCanjeMessage();
+}
+
+function updateCanjeMessage() {
+  const modelo = document.getElementById('cModel').value;
+  const cap = document.getElementById('cCap').value;
+  const bat = document.getElementById('cBat').value;
+  const batLabel = BATERIA_LABELS[bat];
+  const msg = encodeURIComponent(`Hola Lancer! Quiero cotizar el canje de mi iPhone ${modelo} de ${cap}GB con batería al ${batLabel}.`);
+  document.getElementById('canjeWa').href = `https://wa.me/${PHONE}?text=${msg}`;
+}
+
+function openCanje() {
+  document.getElementById('canjeModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  trackOpenCanje();
+}
+function closeCanje() {
+  document.getElementById('canjeModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Init
+renderFilters();
+renderGrid();
+populateCanje();
+
+// updated time
+const now = new Date();
+const h = now.getHours().toString().padStart(2,'0');
+const m = now.getMinutes().toString().padStart(2,'0');
+document.getElementById('updated').textContent = `Actualizado hoy a las ${h}:${m}`;
+</script>
+
+</body>
+</html>
